@@ -4,6 +4,19 @@ import Panel from "./Panel";
 import './App.css';
 
 class App extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			name: "Welt"
+		}
+
+		setTimeout(() => {
+			this.setState({
+				name: "Venus"
+			})
+		},2000);
+	}
+
   render() {
     return (
       <div className="App">
@@ -15,6 +28,8 @@ class App extends Component {
 				<Panel heading="second titel">
 					<Button label="Ich bin ein in prop.chilren zu finden"></Button>
 				</Panel>
+				<h2> Hallo {this.state.name}</h2>
+				<p>{this.state.name.length}</p>
       </div>
     );
   }

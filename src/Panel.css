@@ -8,7 +8,7 @@
 	padding: 15px;
 	margin: 0;
 }
-.Panel-content{
+.Panel-content, .Panel-children{
 	padding: 15px;
 	margin: 0;
 }
