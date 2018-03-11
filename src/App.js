@@ -12,8 +12,9 @@ class App extends Component {
           <Button label="Klick mich!"></Button>
         </div>
 				<Panel heading="first titel" content="this is the first content"></Panel>
-				<Panel heading="second titel" content="this is the second content"></Panel>
-        <Button label="Klick mich nicht!"></Button>
+				<Panel heading="second titel">
+					<Button label="Ich bin ein in prop.chilren zu finden"></Button>
+				</Panel>
       </div>
     );
   }

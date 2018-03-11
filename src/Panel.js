@@ -7,6 +7,7 @@ class Panel extends Component {
 			<div className="Panel">
 				<h3 className="Panel-heading">{this.props.heading}</h3>
 				<p className="Panel-content">{this.props.content}</p>
+				<p className="Panel-content">{this.props.children}</p>
 			</div>
 		)
 	}
