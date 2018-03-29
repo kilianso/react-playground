@@ -7,13 +7,22 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			name: "Welt"
+			name: "Welt",
+			counter: 0
 		}
 		this.changeName = this.changeName.bind(this);
+		this.changeCounter = this.changeCounter.bind(this);
 	}
 	changeName(){
 		this.setState({
 			name: "Venus"
+		})
+	}
+	changeCounter(){
+		let nc = this.state.counter;
+		nc += 1;
+		this.setState({
+			counter: nc
 		})
 	}
 
@@ -35,6 +44,8 @@ class App extends Component {
 				<button onClick={this.changeName}>Verändere den Namen</button>
 				<h2> Hallo {this.state.name}</h2>
 				<p>{this.state.name.length}</p>
+				<button onClick={this.changeCounter}>Count up</button>
+				<p>Aktueller counter: {this.state.counter}</p>
       </div>
     );
   }
