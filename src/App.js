@@ -9,12 +9,12 @@ class App extends Component {
 		this.state = {
 			name: "Welt"
 		}
-
-		setTimeout(() => {
-			this.setState({
-				name: "Venus"
-			})
-		},2000);
+		this.changeName = this.changeName.bind(this);
+	}
+	changeName(){
+		this.setState({
+			name: "Venus"
+		})
 	}
 
   render() {
@@ -24,10 +24,15 @@ class App extends Component {
           <h2 className="App-heading">Welcome to React!!!</h2>
           <Button label="Klick mich!"></Button>
         </div>
+				{/* Important note, this is not HTML.
+					So the attributes you set here are used as props to render the component.
+					That means "title" is not like a title-attribute in HMTL and can be placed/rendered out into another element.
+				*/}
 				<Panel heading="first titel" content="this is the first content"></Panel>
 				<Panel heading="second titel">
-					<Button label="Ich bin ein in prop.chilren zu finden"></Button>
+					<Button label="Ich bin ein props.children"></Button>
 				</Panel>
+				<button onClick={this.changeName}>Verändere den Namen</button>
 				<h2> Hallo {this.state.name}</h2>
 				<p>{this.state.name.length}</p>
       </div>
