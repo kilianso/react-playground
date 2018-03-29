@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from "./Button";
 import Panel from "./Panel";
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 	constructor(props){
